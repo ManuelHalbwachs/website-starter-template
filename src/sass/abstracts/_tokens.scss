@@ -2,6 +2,8 @@
 @use "typography" as *;
 @use "sizes" as *;
 
+$prefix: "sima-";
+
 $active-theme: $light;
 $enable-media-query-dark-mode: false;
 
