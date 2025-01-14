@@ -1,21 +1,17 @@
-@use "../abstracts/" as *;
+@use "../abstracts" as *;
 
-.primary-nav {
-    --flex-column-gap: #{size(48)};
+.nav {
+  --flex-column-gap: #{$navigation-gap};
+  list-style: none;
+  font-family: $navigation-font-family;
+  font-weight: $navigation-font-weight;
 
-    ul {
-        list-style: none;
+  a {
+    color: $navigation-color;
+    text-decoration: $navigation-link-text-decoration;
+
+    &:is(:hover, :focus) {
+      color: $navigation-color-hover;
     }
-
-    a {
-        text-decoration: none;
-        color: clr(neutral, 100);
-        font-family: $ff-serif;
-        font-size: fs(600);
-
-        &:is(:hover, :focus) {
-            opacity: 0.7;
-            text-decoration: underline;
-        }
-    }
+  }
 }
